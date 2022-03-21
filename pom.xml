@@ -11,6 +11,7 @@
 	<groupId>com.eldar</groupId>
 	<artifactId>ejercicio2Eldar</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
 	<name>ejercicio2Eldar</name>
 	<description>Ejercicio 2 Eldar</description>
 	<properties>
