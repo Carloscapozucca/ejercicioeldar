@@ -23,7 +23,7 @@ public class Main {
         }
         System.out.println("Ingrese Nombre y Apellido :");
         tarjeta2.setCardHolder(scanner.next());
-        System.out.println("Ingrese fecha de vencimiento :");
+        System.out.println("Ingrese fecha de vencimiento en formato (2022-03-21):");
         tarjeta2.setFechaVencimiento(scanner.next());
         if (comparador.compare(tarjeta2.getFechaVencimiento(), "2022-03-21") < 0) {
             System.out.println("La tarjeta es invalida para operar");
@@ -39,7 +39,7 @@ public class Main {
         } catch (Exception e) {
             System.out.println("No es un numero");
         }
-        if (tarjeta2.getImporte() != null && tarjeta2.getFechaVencimiento() != null) {
+        if (tarjeta2.getImporte() != null && tarjeta2.getFechaVencimiento() != null && tarjeta2.getNroTarjeta() != null) {
             System.out.println("\n" + tarjeta2.devolverInfo(tarjeta2));
         }
     }
