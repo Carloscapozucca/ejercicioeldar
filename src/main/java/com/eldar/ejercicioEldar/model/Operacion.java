@@ -5,13 +5,12 @@ import lombok.Setter;
 
 import javax.persistence.*;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 
 @Getter
 @Setter
 @Entity
-@Table(name = "tarjeta")
-public class Tarjeta {
+@Table (name = "operacion")
+public class Operacion {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -19,11 +18,8 @@ public class Tarjeta {
     private Long id;
 
     private String marca;
-    private String nroTarjeta;
-
-    private String cardHolder;
+    private LocalDate fecha;
     private Double importe;
-    private LocalDate fechaVencimiento;
-
-
+    private Double tasa;
+    private Double importeTotal;
 }
