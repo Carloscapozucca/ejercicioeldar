@@ -1,10 +1,8 @@
 package com.eldar.ejercicioEldar.view;
 
-import com.eldar.ejercicioEldar.model.Tarjeta;
 import com.eldar.ejercicioEldar.model.Tarjeta2;
 
 import java.text.Collator;
-import java.time.LocalDate;
 import java.util.Scanner;
 
 public class Main {
@@ -18,27 +16,27 @@ public class Main {
         System.out.println("Ingrese marca de la tarjeta (visa, nara, amex) :");
         tarjeta2.setMarca(scanner.next());
         System.out.println("Ingrese numero de tarjeta 16 digitos :");
-        try{
+        try {
             tarjeta2.setNroTarjeta(scanner.nextLong());
-        }catch(Exception e){
+        } catch (Exception e) {
             System.out.println("No es un numero");
         }
         System.out.println("Ingrese Nombre y Apellido :");
         tarjeta2.setCardHolder(scanner.next());
         System.out.println("Ingrese fecha de vencimiento :");
         tarjeta2.setFechaVencimiento(scanner.next());
-        if(comparador.compare(tarjeta2.getFechaVencimiento(), "2022-03-21") < 0){
+        if (comparador.compare(tarjeta2.getFechaVencimiento(), "2022-03-21") < 0) {
             System.out.println("La tarjeta es invalida para operar");
             tarjeta2.setFechaVencimiento(null);
         }
         System.out.println("Ingrese importe :");
-        try{
+        try {
             tarjeta2.setImporte(scanner.nextDouble());
-            if(tarjeta2.getImporte() > 1000){
+            if (tarjeta2.getImporte() > 1000) {
                 System.out.println("La operacion es invalida.");
                 tarjeta2.setImporte(null);
             }
-        }catch(Exception e){
+        } catch (Exception e) {
             System.out.println("No es un numero");
         }
         if (tarjeta2.getImporte() != null && tarjeta2.getFechaVencimiento() != null) {
